@@ -54,7 +54,6 @@ def login():
             flash("Log in successful", "success")
             
             return redirect(url_for("secure_page"))  # they should be redirected to a secure-page route instead
-            
         else:
                 flash('Username or Password is incorrect.', 'danger')
     return render_template("login.html", form=form)
