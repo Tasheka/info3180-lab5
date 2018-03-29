@@ -69,6 +69,7 @@ def secure_page():
 @app.route("/logout")
 def logout():
     logout_user()
+    flash('You have been logged out.','danger')
     return redirect(url_for('home'))
     
 # user_loader callback. This callback is used to reload the user object from
